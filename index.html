@@ -37,7 +37,6 @@
 				margin: 0 0 37px;
 			}
 			h1 {
-				font-size: 55px;
 				color: transparent;
 				margin: 0 auto;
 				position: relative;
@@ -45,6 +44,7 @@
 				-webkit-text-fill-color: transparent;
 				background-image: url(./pattern.png);
 				height: 50px;
+				font-size: 55px;
 				max-width: 500px;
 			}
 			h1:after {
@@ -93,11 +93,7 @@
 			.yellow {
 			  text-shadow: 2px 2px 0px #fed330
 			}
-			@media (max-width: 700px), (max-device-width: 700px) {
-				.spacer {
-					display: block;
-					line-height: 15px;
-				}
+			@media (max-width: 700px) {
 				body {
 					font-size: 30px;
 					line-height: 35px;
@@ -116,6 +112,10 @@
 				.header {
 					margin: 0 0 0px;
 				}
+				.spacer {
+					display: block;
+					line-height: 15px;
+				}
 				#email {
 					display:inline-block;
 				}
@@ -123,9 +123,38 @@
 					display:none;
 				}
 			}
-			@media (min-width:701px) and (max-width: 849px), (min-device-width:701px) and (max-device-width:701px) {
+			@media (min-width:701px) and (max-width: 849px) {
 				.inner-content {
 					max-width: 650px;
+				}
+			}
+			@media (max-device-width: 751px) {
+				.inner-content {
+					max-width: 85%;
+				}
+				.content {
+					height: 100%;
+				}
+				body {
+					font-size: 70px;
+					line-height: 80px;
+				}
+				h1 {
+					font-size: 90px;
+					height: 65px;
+					max-width: 100%;
+					margin: auto;
+					margin-top: 30px;
+				}
+				.spacer {
+					display: block;
+					line-height: 15px;
+				}
+				#email {
+					display:inline-block;
+				}
+				#contact-block {
+					display:none;
 				}
 			}
 		</style>
