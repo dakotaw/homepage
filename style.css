@@ -43,6 +43,10 @@ h1:after {
 	text-shadow: 1px 1px 0 #fff;
 	content: attr(data-text);
 }
+h2 {
+	font-size: 40px;
+	text-align: center;
+}
 .contact {
 	display: inline;
 	color: #ffffff;
