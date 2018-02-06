@@ -19,11 +19,11 @@ img {
 	padding: 43px 10px;
 }
 .inner-content {
-	max-width: 800px;
+	max-width: 810px;
 	margin: auto;
 }
 .header {
-	margin: 0 0 30px;
+	margin: 0 0 15px;
 }
 h1 {
 	color: transparent;
@@ -46,6 +46,11 @@ h1:after {
 h2 {
 	font-size: 40px;
 	text-align: center;
+	margin: 10px 0;
+	line-height: 45px;
+}
+strong {
+	color: #ffffff;
 }
 .contact {
 	display: inline;
@@ -86,6 +91,14 @@ a.project {
 .yellow {
   text-shadow: 2px 2px 0px #fed330
 }
+@media (min-width:701px) and (max-width: 849px) {
+	.inner-content {
+		max-width: 650px;
+	}
+	h2 {
+		max-width: 650px;
+	}
+}
 @media (max-width: 700px) {
 	body {
 		font-size: 30px;
@@ -102,6 +115,11 @@ a.project {
 		height: 60px;
 		text-align: left;
 	}
+	h2 {
+		text-align: left;
+		font-size: 30px;
+		line-height: 35px;
+	}
 	.header {
 		margin: 0 0 0px;
 	}
@@ -116,12 +134,7 @@ a.project {
 		display:none;
 	}
 }
-@media (min-width:701px) and (max-width: 849px) {
-	.inner-content {
-		max-width: 650px;
-	}
-}
-@media (max-device-width: 751px) {
+@media (max-device-width: 699px) {
 	.inner-content {
 		max-width: 85%;
 	}
@@ -138,11 +151,15 @@ a.project {
 		line-height: 100px;
 		max-width: 100%;
 		margin-top: 30px;
-		margin-left: 5px;
+		margin-left: 7px;
 	}
 	h1:after {
 		top: 0px;
 		left: -7px;
+	}
+	h2 {
+		font-size: 70px;
+		text-align: left;
 	}
 	.spacer {
 		display: block;
