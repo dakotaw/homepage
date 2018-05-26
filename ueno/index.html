@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Oswald:700" rel="stylesheet">
+	<link rel="icon" type="image/png" href="favicon.ico" />
+	<link rel="stylesheet" href="style.css">
+	<title>Hi Ueno!</title>
+
+	<meta name="description" content="A short treatise on why you should hire Dakota Williams." />
+	<meta name="author" content="Dakota J Williams" />
+
+	<meta property="og:title" content="Hi Ueno!" />
+	<meta property="og:type" content="website" />
+	<meta property="og:image" content="banner.png" />
+	<meta property="og:url" content="http://www.dakotajwilliams.com/ueno" />
+	<meta property="og:description" content="A short treatise on why you should hire Dakota Williams." />
+
+	<meta name="google-site-verification" content="s85gAiUWAr2RYdkB59rGlwalFvn_94E681rwWItQWAw" />
+</head>
+
+<body>
+	<div class="content">
+		<div class="inner-content">
+			<div class="header">
+				<h1 data-text="HI UENO!">HI UENO!</h1>
+			</div>
+			<div class="spacer">
+				<br/>
+			</div>
+			<h2>
+				I'm a <strong>software engineer</strong> with a love for <strong>people</strong>, <strong>tech</strong>, and
+				<strong>deadlines</strong> (seriously!). I just left my job as an iOS engineer at <strong>Facebook</strong> 
+				to find a more <strong>creative</strong>, <strong>interdisciplinary</strong> role.
+				<div class="spacer"><br/></div>
+				A friend recommended <strong>Ueno</strong> as a good fit. Between the 
+				<a href="https://interview.ueno.co/" class="project" title="test">interview adventure game</a> and the 
+				<a href="https://ueno.co/careers" class="project">rockin' values</a>
+				on your careers page, I'm thinking he was right.
+				<div class="spacer"><br/></div>
+				So check out my <a href="http://www.dakotajwilliams.com" class="project">portfolio</a> of previous agency work, 
+				my <a href="https://www.dropbox.com/s/51n8eds03eixhsd/Dakota%20Williams%20CV.pdf" class="project" target="_blank">resume</a>,
+				or even my <a href="http://www.twitter.com/dakotaw" class="project" target="_blank">hot takes</a>.
+				Then let me know if you'd like to chat. I'll bring chocolate.
+			</h2>
+			<div class="spacer">
+				<br/>
+			</div>
+			<a href="http://www.dakotajwilliams.com" class="project">MAIN SITE & PORTFOLIO</a>
+		</div>
+	</div>
+
+	<script>
+		var projects = document.querySelectorAll("a:not(.project)");
+		var colors = ["blue", "red", "yellow"];
+		var hexColors = ["#fed330", "#45aaf2", "#fc5c65"];
+		var colorIndex = 0;
+
+		function pickColor() {
+			colorIndex++;
+			return colors[colorIndex % 3];
+		}
+
+		function pickRandomColorHex() {
+			return hexColors[Math.floor(Math.random() * 3)];
+		}
+
+		projects.forEach(function (project, index) {
+			project.addEventListener("mouseenter", function (event) {
+				var target = event.target;
+				target.classList.add(pickColor());
+			})
+		})
+
+		projects.forEach(function (project, index) {
+			project.addEventListener("mouseleave", function (event) {
+				var target = event.target;
+				target.classList.remove('blue', 'red', 'yellow');
+			})
+		})
+
+		window.onscroll = function () {
+			document.body.style.backgroundColor = pickRandomColorHex();
+			console.log(pickRandomColorHex());
+		}
+	</script>
+</body>
+
+</html>
